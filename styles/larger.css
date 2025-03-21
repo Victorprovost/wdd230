@@ -1,139 +1,60 @@
-/* Base Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Header Styles */
-header {
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-}
-
-/* Navigation Bar */
-nav {
-    display: flex;
-    flex-direction: column;
-    background-color: #333;
-}
-
-nav a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-nav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Main Content */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-main .card {
-    background-color: #f4f4f4;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 5px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-/* Card Hover Effect */
-main .card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
-}
-
-/* Course Links */
-ul.course-links {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul.course-links li {
-    background-color: #ff7e5f;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
-}
-
-ul.course-links li:hover {
-    background-color: #feb47b;
-}
-
-/* Button Styles */
-button {
-    background-color: #ff7e5f;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
-}
-
-button:hover {
-    background-color: #feb47b;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Responsive Design */
+/* Header */
 @media (min-width: 768px) {
-    nav {
-        flex-direction: row;
-        justify-content: space-around;
+    header {
+        padding: 20px;
     }
 
-    main {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 20px;
-    }
-
-    main .card:nth-child(1) {
-        grid-column: span 2;
+    header h1 {
+        font-size: 2em;
     }
 }
 
-/* Media Queries for Larger Screens */
 @media (min-width: 1024px) {
-    header {
+    header h1 {
         font-size: 2.5em;
     }
+}
 
-    nav a {
-        padding: 20px 30px;
+/* Navigation (Horizontal on Larger Screens) */
+@media (min-width: 768px) {
+    nav.main-nav ul {
+        flex-direction: row;
+        justify-content: center;
     }
 
+    nav.main-nav a {
+        padding: 14px 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    nav.main-nav a {
+        padding: 20px 30px;
+    }
+}
+
+/* Main Content (Side-by-Side on Larger Screens) */
+@media (min-width: 768px) {
     main {
-        grid-template-columns: 3fr 1fr;
+        max-width: 1200px;
+    }
+
+    /* Target only the two sections for side-by-side layout */
+    main .card {
+        display: inline-grid; /* 
+        width: calc(50% - 20px);
+        margin: 0 10px; 
+        vertical-align: top; 
+    }
+
+    /* Reset margin-bottom for cleaner layout */
+    main .card {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .card {
+        margin: 0 15px; /* Larger gap */
     }
 }
