@@ -1,60 +1,28 @@
-/* Header */
 @media (min-width: 768px) {
-    header {
-        padding: 20px;
-    }
+    header { padding: 20px; }
+    header h1 { font-size: 2em; }
 
-    header h1 {
-        font-size: 2em;
-    }
-}
-
-@media (min-width: 1024px) {
-    header h1 {
-        font-size: 2.5em;
-    }
-}
-
-/* Navigation (Horizontal on Larger Screens) */
-@media (min-width: 768px) {
+    .menu-toggle { display: none; }
+    .dark-mode-toggle { right: 20px; }
+    nav.main-nav { display: block; }
     nav.main-nav ul {
         flex-direction: row;
         justify-content: center;
     }
+    nav.main-nav a { padding: 14px 20px; }
 
-    nav.main-nav a {
-        padding: 14px 20px;
-    }
-}
-
-@media (min-width: 1024px) {
-    nav.main-nav a {
-        padding: 20px 30px;
-    }
-}
-
-/* Main Content (Side-by-Side on Larger Screens) */
-@media (min-width: 768px) {
-    main {
-        max-width: 1200px;
-    }
-
-    /* Target only the two sections for side-by-side layout */
+    main { max-width: 1200px; }
     main .card {
-        display: inline-grid; /* 
+        display: inline-grid;
         width: calc(50% - 20px);
-        margin: 0 10px; 
-        vertical-align: top; 
+        margin: 0 10px;
+        vertical-align: top;
     }
-
-    /* Reset margin-bottom for cleaner layout */
-    main .card {
-        margin-bottom: 0;
-    }
+    main .card { margin-bottom: 0; }
 }
 
 @media (min-width: 1024px) {
-    main .card {
-        margin: 0 15px; /* Larger gap */
-    }
+    header h1 { font-size: 2.5em; }
+    nav.main-nav a { padding: 20px 30px; }
+    main .card { margin: 0 15px; }
 }
