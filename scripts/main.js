@@ -1,5 +1,3 @@
-// main.js
-
 // Hamburger Menu Toggle
 const menuToggle = document.getElementById('menu-toggle');
 const mainNav = document.getElementById('main-nav');
@@ -11,30 +9,27 @@ menuToggle.addEventListener('click', () => {
 
 // Dark Mode Toggle
 const darkModeToggle = document.getElementById('dark-mode-toggle');
-const mainContent = document.getElementById('main-content');
+const body = document.body;
 
 darkModeToggle.addEventListener('click', () => {
-    mainContent.classList.toggle('dark-mode');
-    darkModeToggle.textContent = mainContent.classList.contains('dark-mode') ? '☀️' : '🌙';
-    localStorage.setItem('darkMode', mainContent.classList.contains('dark-mode'));
+    body.classList.toggle('dark-mode');
+    darkModeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
 });
 
-// Load Dark Mode Preference
 if (localStorage.getItem('darkMode') === 'true') {
-    mainContent.classList.add('dark-mode');
+    body.classList.add('dark-mode');
     darkModeToggle.textContent = '☀️';
 }
 
 // Update Current Year
 function updateCurrentYear() {
-    const currentYear = new Date().getFullYear();
-    document.getElementById('year').textContent = currentYear;
+    document.getElementById('year').textContent = new Date().getFullYear();
 }
 
 // Update Last Modified Date
 function updateLastModified() {
-    const lastModified = document.lastModified;
-    document.getElementById('lastModified').querySelector('span').textContent = lastModified;
+    document.getElementById('lastModified').querySelector('span').textContent = new Date(document.lastModified).toLocaleString();
 }
 
 // Weather Placeholder
@@ -44,11 +39,10 @@ function updateWeather() {
 
 // Visit Counter
 function updateVisits() {
-    const visitsSpan = document.getElementById('visits');
-    let visits = localStorage.getItem('pageVisits') || 0;
-    visits = parseInt(visits) + 1;
+    let visits = parseInt(localStorage.getItem('pageVisits') || '0', 10);
+    visits += 1;
     localStorage.setItem('pageVisits', visits);
-    visitsSpan.textContent = visits;
+    document.getElementById('visits').textContent = visits;
 }
 
 // Execute on Page Load
@@ -58,4 +52,3 @@ document.addEventListener('DOMContentLoaded', () => {
     updateWeather();
     updateVisits();
 });
-

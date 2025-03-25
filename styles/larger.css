@@ -1,28 +1,77 @@
 @media (min-width: 768px) {
-    header { padding: 20px; }
-    header h1 { font-size: 2em; }
+    header {
+        padding: 20px;
+    }
 
-    .menu-toggle { display: none; }
-    .dark-mode-toggle { right: 20px; }
-    nav.main-nav { display: block; }
+    header h1 {
+        font-size: 2em;
+    }
+
+    .menu-toggle {
+        display: none; /* Hide hamburger menu on large screens */
+    }
+
+    .dark-mode-toggle {
+        right: 20px; /* Position maintained */
+    }
+
+    nav.main-nav {
+        display: block; /* Always visible */
+    }
+
     nav.main-nav ul {
         flex-direction: row;
         justify-content: center;
     }
-    nav.main-nav a { padding: 14px 20px; }
 
-    main { max-width: 1200px; }
+    nav.main-nav a {
+        padding: 14px 20px;
+    }
+
+    main {
+        max-width: 960px; /* Matches temple-large.webp max width */
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Learning Activities and Information side-by-side */
+        gap: 20px;
+    }
+
     main .card {
-        display: inline-grid;
-        width: calc(50% - 20px);
-        margin: 0 10px;
+        margin: 0 10px; /* Adjusted from previous inline-grid spacing */
         vertical-align: top;
     }
-    main .card { margin-bottom: 0; }
+
+    .hero {
+        grid-column: 1 / -1; /* Hero spans full width */
+    }
+
+    main h1 {
+        grid-column: 1 / -1; /* Title spans full width */
+    }
+
+    .hero-overlay {
+        font-size: 1.25em;
+        padding: 0.75em 1.5em;
+    }
+
+    .map-container {
+        grid-column: 1 / -1; /* Map spans full width */
+    }
+
+    .map-container iframe {
+        height: 450px; /* Original iframe height */
+    }
 }
 
 @media (min-width: 1024px) {
-    header h1 { font-size: 2.5em; }
-    nav.main-nav a { padding: 20px 30px; }
-    main .card { margin: 0 15px; }
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    nav.main-nav a {
+        padding: 20px 30px;
+    }
+
+    main .card {
+        margin: 0 15px; /* Larger spacing */
+    }
 }

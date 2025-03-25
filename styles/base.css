@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2 {
@@ -51,11 +52,7 @@ header {
 
 header img {
     border-radius: 50%;
-}
-
-header h1 {
-    font-size: 1.5em;
-    color: #fff;
+    object-fit: cover;
 }
 
 /* Buttons */
@@ -111,8 +108,34 @@ main {
 
 main h1 { text-align: center; }
 
-main .card:nth-child(2) { order: 2; }
-main .card:nth-child(3) { order: 1; }
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    white-space: nowrap;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Card Sections */
+main .card:nth-child(3) { order: 2; } /* Learning Activities */
+main .card:nth-child(4) { order: 1; } /* Information */
 
 main .card {
     background-color: #fff;
@@ -128,20 +151,46 @@ main .card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Dark Mode for Main */
-main.dark-mode {
+/* Map Container */
+.map-container {
+    text-align: center;
+}
+
+.map-container iframe {
+    max-width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+/* Dark Mode */
+body.dark-mode {
     background-color: #333;
     color: #fff;
 }
 
-main.dark-mode .card {
+body.dark-mode h1,
+body.dark-mode h2 {
+    color: #77b5fe;
+}
+
+body.dark-mode .card {
     background-color: #444;
     border-color: #555;
     color: #fff;
 }
 
-main.dark-mode a { color: #77b5fe; }
-main.dark-mode a:hover { color: #a3cfff; }
+body.dark-mode a {
+    color: #77b5fe;
+}
+
+body.dark-mode a:hover {
+    color: #a3cfff;
+}
+
+body.dark-mode .hero-overlay {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
 
 /* Footer */
 footer {

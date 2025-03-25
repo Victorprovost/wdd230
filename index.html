@@ -10,48 +10,56 @@
     <meta property="og:image" content="https://example.com/images/hometown.jpg">
     <meta property="og:url" content="https://example.com/index.html">
     <title>Victor Provost - WDD 230 - Web Frontend Development</title>
-    <link rel="stylesheet" href="styles/normalize.css"> <!-- Custom normalization first -->
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="icon" href="favicon.ico">
 </head>
 <body>
     <header>
-        <img src="images/profile_photo.jpg" alt="Victor Provost profile photo" width="100" height="100">
+        <img src="images/profile.webp" alt="Victor Provost profile photo" width="100" height="100">
         <h1>Victor Provost - WDD 230</h1>
-        <button id="dark-mode-toggle" class="dark-mode-toggle">🌙</button>
-        <button id="menu-toggle" class="menu-toggle">☰</button>
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
     </header>
-    <nav class="main-nav" id="main-nav">
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="week01/chamber-site-plan.html">Chamber</a></li>
             <li><a href="site-plan.html">Site Plan</a></li>
             <li><a href="form.html">Form</a></li>
-            <li><a href="design.html">Design</a></li>
-            <li><a href="https://codepen.io/Victorprovost" target="_blank" rel="noopener">Week 2 CodePen</a></li>
-            <li><a href="week02/bom.html">Book of Mormon</a></li>
-            <li><a href="week03/images/landscape.webp">WebP</a></li>
-            <li><a href="week03/lazyload.html">lazyload</a></li>
-            <li><a href="week03/responsive-images.html">Responsive Images</a></li>
-            <li><a href="chamber/index.html">chamber page</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
         </ul>
     </nav>
     <main id="main-content">
+        <div class="hero">
+            <picture>
+                <source media="(max-width: 400px)" srcset="images/fav-temple-mobile.webp" width="400">
+                <source media="(min-width: 401px)" srcset="images/fav-temple-large.webp" width="960">
+                <img src="images/fav-temple-large.webp" alt="Salt Lake Temple" loading="eager">
+            </picture>
+            <div class="hero-overlay">Salt Lake Temple</div>
+        </div>
         <h1>WDD 230: Web Frontend Development</h1>
-        <section class="card">
+        <section class="card learning-activities">
             <h2>Learning Activities</h2>
             <ul>
-                <li><a href="#">Activity 1</a></li>
-                <li><a href="#">Activity 2</a></li>
-                <li><a href="#">Activity 3</a></li>
+                <li><a href="week01/chamber-site-plan.html">Chamber</a></li>
+                <li><a href="week02/design.html">Design</a></li>
+                <li><a href="week02/bom.html">Book of Mormon</a></li>
+                <li><a href="https://codepen.io/Victorprovost" target="_blank" rel="noopener">Week 2 CodePen</a></li>
+                <li><a href="week03/responsive-images.html">Responsive Images</a></li>
+                <li><a href="week03/images/landscape.webp">WebP</a></li>
+                <li><a href="week03/lazyload.html">Lazyload</a></li>
             </ul>
         </section>
-        <section class="card">
+        <section class="card information">
             <h2>Information</h2>
             <p>Weather: <span id="weather">Loading weather...</span></p>
             <p>Number of visits: <span id="visits">Loading visits...</span></p>
         </section>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15760.239570162441!2d7.4705944!3d9.0583017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0ba5b0b615b7%3A0x2b6d0b4e5b0b7e5e!2sAbuja%2C%20Federal%20Capital%20Territory%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1742896055213" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </main>
     <footer>
         <p>© <span id="year">2025</span> Victor Provost, Nigeria</p>
