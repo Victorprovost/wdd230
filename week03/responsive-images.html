@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images Demo</title>
+    <meta name="description" content="Demonstration of responsive images using the picture element">
+    <meta name="author" content="Victor Provost">
+    <link rel="stylesheet" href="styles/responsive-images.css">
+</head>
+<body>
+    <header>
+        <h1>Responsive Images Demo</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(max-width: 500px)" srcset="images/hero-small.webp">
+                <source media="(max-width: 1000px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-large.webp" alt="A majestic temple with intricate architecture against a clear sky" width="1500" height="750">
+            </picture>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Victor Provost</p>
+    </footer>
+</body>
+</html>

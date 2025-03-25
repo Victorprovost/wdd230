@@ -1,0 +1,130 @@
+/* Using color schema from site plan */
+:root {
+    --primary-color: #3498db;      /* Blue - Headers, headings */
+    --secondary-color: #2ecc71;    /* Green - Accents, buttons */
+    --background-color: #ecf0f1;   /* Light Gray - Background */
+    --text-color: #2c3e50;         /* Dark Gray - Text */
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+    color: var(--primary-color);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+nav ul {
+    display: none;
+    list-style: none;
+}
+
+nav ul.show {
+    display: block;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Main */
+main {
+    padding: 1rem;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+}
+
+.cta {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.join-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.events, .weather, .spotlights {
+    margin: 1rem 0;
+}
+
+.spotlight-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.spotlight {
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}

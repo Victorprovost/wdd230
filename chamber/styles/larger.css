@@ -1,0 +1,28 @@
+@media (min-width: 768px) {
+    /* Header and Navigation */
+    .menu-toggle {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* Main Layout */
+    .hero img {
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    .spotlight-grid {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .spotlight {
+        flex: 1;
+        max-width: 300px;
+    }
+}
