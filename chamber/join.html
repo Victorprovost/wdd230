@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join | Abuja Chamber of Commerce</title>
+    <meta name="description" content="Join the Abuja Chamber of Commerce to connect with businesses and grow in Nigeria's capital.">
+    <meta name="author" content="Victor Provost">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Social Media Meta -->
+    <meta property="og:title" content="Join | Abuja Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=1">
+    <meta property="og:url" content="https://example.com/join.html">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+    <header>
+        <h1>Abuja Chamber of Commerce</h1>
+        <button class="menu-toggle">☰</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Membership</a></li>
+                <li><a href="discover.html">Events</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="join-grid">
+        <section class="join-form">
+            <h2>Join the Chamber</h2>
+            <form method="get" action="thankyou.html" id="membershipForm">
+                <label>
+                    First Name:
+                    <input type="text" name="firstName" id="firstName" required>
+                </label>
+                <label>
+                    Last Name:
+                    <input type="text" name="lastName" id="lastName" required>
+                </label>
+                <label>
+                    Title/Position:
+                    <input type="text" name="title" id="title" pattern="[A-Za-z\s-]{7,}" title="Use only letters, hyphens, or spaces (min 7 characters)">
+                </label>
+                <label>
+                    Email:
+                    <input type="email" name="email" id="email" required placeholder="example@domain.com">
+                </label>
+                <label>
+                    Mobile Phone:
+                    <input type="tel" name="phone" id="phone" required>
+                </label>
+                <label>
+                    Business/Organization Name:
+                    <input type="text" name="businessName" id="businessName" required>
+                </label>
+                <label>
+                    Membership Level:
+                    <select name="membership" id="membership">
+                        <option value="np">NP Membership (Non-Profit)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+                <label>
+                    Business Description:
+                    <textarea name="description" id="description"></textarea>
+                </label>
+                <input type="hidden" name="timestamp" id="timestamp" value="">
+                <input type="submit" value="Become a Member">
+            </form>
+        </section>
+
+        <aside class="membership-benefits">
+            <h2>Membership Benefits</h2>
+            <ul>
+                <li><strong>NP (Non-Profit):</strong> Free entry, basic networking events.</li>
+                <li><strong>Bronze:</strong> Event discounts, monthly newsletter.</li>
+                <li><strong>Silver:</strong> Above + training sessions, spotlight ads.</li>
+                <li><strong>Gold:</strong> All benefits + exclusive events, priority support.</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Contact: info@abujachamber.org | +2348101425317</p>
+            <p>© 2024 Victor Provost | WDD 230 Project | Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

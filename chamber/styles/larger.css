@@ -43,3 +43,53 @@
         transition: transform 0.3s ease;
     }
 }
+
+@media (min-width: 768px) {
+    /* Header and Navigation */
+    .menu-toggle {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* Main Layout */
+    .hero img {
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    .spotlight-grid {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .spotlight {
+        flex: 1;
+        max-width: 300px;
+    }
+
+    /* Discover Page Specific Styles */
+    .discover-grid {
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .discover-grid .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+    }
+
+    .discover-grid figure:hover img {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+
+    /* Join Page Specific Styles */
+    .join-grid {
+        grid-template-columns: 2fr 1fr; /* Form and benefits side-by-side */
+    }
+}
