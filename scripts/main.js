@@ -52,3 +52,38 @@ document.addEventListener('DOMContentLoaded', () => {
     updateWeather();
     updateVisits();
 });
+
+// Hamburger Menu Toggle
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+    document.querySelector('nav ul').classList.toggle('show');
+});
+
+// Last Modified Date
+document.getElementById('last-modified').textContent = document.lastModified;
+
+// Form Validation and Rating Display
+const form = document.getElementById('userForm');
+if (form) {
+    const password = document.getElementById('password');
+    const passwordConfirm = document.getElementById('passwordConfirm');
+    const passwordError = document.getElementById('passwordError');
+    const rating = document.getElementById('rating');
+    const ratingValue = document.getElementById('ratingValue');
+
+    // Password Match Validation
+    form.addEventListener('submit', (e) => {
+        if (password.value !== passwordConfirm.value) {
+            e.preventDefault();
+            passwordError.textContent = "Passwords do not match. Please try again.";
+            passwordError.style.display = "block";
+            password.value = "";
+            passwordConfirm.value = "";
+            password.focus();
+        }
+    });
+
+    // Rating Display
+    rating.addEventListener('input', () => {
+        ratingValue.textContent = rating.value;
+    });
+}

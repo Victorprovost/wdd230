@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form | WDD 230</title>
+    <meta name="description" content="Form submission page for WDD 230 course activities.">
+    <meta name="author" content="Victor Provost">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>WDD 230 Course Portal</h1>
+        <button class="menu-toggle">☰</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="form.html">Form</a></li>
+                <li><a href="#">Assignments</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Submit Your Information</h2>
+        <form method="get" action="record.html" id="userForm">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required pattern="[a-zA-Z0-9]{8,}" title="Password must be at least 8 alphanumeric characters">
+            </div>
+
+            <div class="form-group">
+                <label for="passwordConfirm">Confirm Password:</label>
+                <input type="password" id="passwordConfirm" name="passwordConfirm" required>
+                <span id="passwordError" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid BYUI email address (e.g., username@byui.edu)">
+            </div>
+
+            <div class="form-group">
+                <label for="rating">Page Rating (1-10):</label>
+                <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="5">
+                <span id="ratingValue">5</span>
+            </div>
+
+            <button type="submit">Submit Form</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Contact: victor.provost@example.com | +2348101425317</p>
+            <p>© 2024 Victor Provost | WDD 230 Project | Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

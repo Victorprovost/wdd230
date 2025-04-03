@@ -1,0 +1,64 @@
+:root {
+    --form-bg: #ffffff;          /* White background for form */
+    --input-border: #3498db;     /* Blue border for inputs */
+    --error-color: #e74c3c;      /* Red for error messages */
+}
+
+form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: var(--form-bg);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+input {
+    padding: 0.5rem;
+    border: 2px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.9rem;
+    display: none;
+}
+
+button[type="submit"] {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #27ae60; /* Darker green */
+}
+
+#ratingValue {
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin-left: 0.5rem;
+}
