@@ -201,3 +201,25 @@ footer {
 }
 
 footer p:first-child { color: #FFFFFF; }
+/* Add to existing base.css */
+.information figure {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.information img#weather-icon {
+    max-width: 50px;
+    height: auto;
+}
+
+.information figcaption#weather-desc {
+    font-size: 0.9em;
+    color: #333;
+}
+
+body.dark-mode .information figcaption#weather-desc {
+    color: #fff;
+}

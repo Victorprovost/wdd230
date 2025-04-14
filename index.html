@@ -42,21 +42,15 @@
         <h1>WDD 230: Web Frontend Development</h1>
         <section class="card learning-activities">
             <h2>Learning Activities</h2>
-            <ul>
-                <li><a href="week01/chamber-site-plan.html">Chamber</a></li>
-                <li><a href="week02/design.html">Design</a></li>
-                <li><a href="week02/bom.html">Book of Mormon</a></li>
-                <li><a href="https://codepen.io/Victorprovost" target="_blank" rel="noopener">Week 2 CodePen</a></li>
-                <li><a href="week03/responsive-images.html">Responsive Images</a></li>
-                <li><a href="week03/images/landscape.webp">WebP</a></li>
-                <li><a href="week03/lazyload.html">Lazyload</a></l>
-                </li><a href="https://codepen.io/blazzard-jason/pen/PoaQgXJ" target="_blank">View My CodePen Project</a>
-                <li><a href="week04/tablebuild.html">Table Build</a></li>
-     
+            <ul id="activity-links"></ul>
         </section>
         <section class="card information">
             <h2>Information</h2>
-            <p>Weather: <span id="weather">Loading weather...</span></p>
+            <p>Current Temperature: <span id="current-temp"></span></p>
+            <figure>
+                <img id="weather-icon" src="" alt="">
+                <figcaption id="weather-desc"></figcaption>
+            </figure>
             <p>Number of visits: <span id="visits">Loading visits...</span></p>
         </section>
         <div class="map-container">
@@ -68,5 +62,7 @@
         <p id="lastModified">Last modified: <span>Loading...</span></p>
     </footer>
     <script src="scripts/main.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/links.js"></script>
 </body>
 </html>

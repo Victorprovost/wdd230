@@ -1,0 +1,53 @@
+[
+    {
+        "familyName": "Okonkwo",
+        "moveInDate": "2025-01-15",
+        "familySize": 4,
+        "visitedByBishopric": true,
+        "members": [
+            {
+                "name": "Chidi Okonkwo",
+                "gender": "Male",
+                "birthdate": "1985-03-22"
+            },
+            {
+                "name": "Ngozi Okonkwo",
+                "gender": "Female",
+                "birthdate": "1987-07-19"
+            },
+            {
+                "name": "Amara Okonkwo",
+                "gender": "Female",
+                "birthdate": "2012-11-05"
+            },
+            {
+                "name": "Kelechi Okonkwo",
+                "gender": "Male",
+                "birthdate": "2015-04-30"
+            }
+        ]
+    },
+    {
+        "familyName": "Adebayo",
+        "moveInDate": "2024-12-01",
+        "familySize": 3,
+        "visitedByBishopric": false,
+        "members": [
+            {
+                "name": "Tunde Adebayo",
+                "gender": "Male",
+                "birthdate": "1990-09-10"
+            },
+            {
+                "name": "Funmi Adebayo",
+                "gender": "Female",
+                "birthdate": "1992-02-14"
+            },
+            {
+                "name": "Yemi Adebayo",
+                "gender": "Male",
+                "birthdate": "2018-06-25"
+            }
+        ]
+    }
+]
